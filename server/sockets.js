@@ -4,7 +4,7 @@ const {
   findByAddress,
   removeBySocket,
   findBySocket
-} = require('./models/users');
+} = require('./models/user');
 
 const socketSetup = io =>
   io.sockets.on('connect', socket => {

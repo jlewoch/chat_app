@@ -5,7 +5,7 @@ const socketIO = require('socket.io');
 const socketSetup = require('./sockets');
 
 const app = express();
-
+app.use('/auth');
 const server = app.listen(3000, () => console.log('Server started'));
 
 // sockets
