@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-class RoomSelectionDisplay extends Component {
+class LoginDisplay extends Component {
   state = {
     validRoom: false,
     roomInput: '',
@@ -66,6 +66,6 @@ class RoomSelectionDisplay extends Component {
   }
 }
 
-RoomSelectionDisplay.propTypes = {};
+LoginDisplay.propTypes = {};
 
-export default RoomSelectionDisplay;
+export default LoginDisplay;

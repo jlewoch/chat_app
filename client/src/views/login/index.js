@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import RoomSelectionDisplay from './RoomSelectionDisplay';
+import LoginDisplay from './LoginDisplay';
 import { setRoom } from '../../store/room/actions';
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({
   joinRoom: e => dispatch(setRoom(e))
 });
-export const RoomSelection = connect(
+export const Login = connect(
   null,
   mapDispatchToProps
-)(RoomSelectionDisplay);
+)(LoginDisplay);

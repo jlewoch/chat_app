@@ -11,7 +11,7 @@ export default class ChatRoomDisplay extends Component {
       <a href="/">Go Back</a>
     ) : (
       <div className="room">
-        <UserList />
+        <UserList users={this.props.users} />
         <ChatWindow />
       </div>
     );

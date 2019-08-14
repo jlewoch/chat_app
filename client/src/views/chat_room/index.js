@@ -4,6 +4,7 @@ import { reconnect } from '../../store/room/actions';
 const mapStateToProps = ({ room }) => ({
   name: room.name,
   roomId: room.roomId
+  users: room.users
 });
 
 const mapDispatchToProps = dispatch => ({
