@@ -5,10 +5,9 @@ const {
   removeBySocket,
   findBySocket
 } = require('./models/user');
-
 const socketSetup = io =>
   io.sockets.on('connect', socket => {
-    socket.on('join-room', async ({ roomId, name }) => {
+    socket.on('join-room', async ({ roomId, name, token }) => {
       try {
         // check if user is already connected based on address
         let user = await findByAddress(socket.handshake.address);
