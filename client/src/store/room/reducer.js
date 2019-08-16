@@ -1,11 +1,8 @@
 import { createReducer } from 'redux-act';
 import * as types from './actionTypes';
 const initialState = {
-  messages: [],
-  users: {},
-  roomId: null,
-  name: null,
-  error: false
+  rooms: [],
+  current: null
 };
 
 const room = createReducer(
@@ -21,7 +18,6 @@ const room = createReducer(
         }
       ]
     }),
-    [types.GOT_LIST]: (state, payload) => ({ ...state, users: payload }),
     [types.USER_JOINED]: (state, payload) => {
       return {
         ...state,
@@ -48,10 +44,13 @@ const room = createReducer(
         users
       };
     },
-    [types.SET_ROOM]: (state, payload) => ({
+    [types.GOT_ROOM_LIST]: (state, payload) => ({
       ...state,
-      roomId: payload.roomId,
-      name: payload.name
+      rooms: payload
+    }),
+    [types.GOT_ROOM_DETAILS]: (state, payload) => ({
+      ...state,
+      current: payload.room
     })
   },
   initialState
